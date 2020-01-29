@@ -1,13 +1,38 @@
 body{
-	font-family: 'Nunito Sans', sans-serif;
-	font-size: 18px;
+	font-family: 'Assistant', sans-serif;
+	font-size: 19px;
 	background-color: #fff;
-	color: #000!important;
+	color: #626262!important;
 }
-.navbar-light .navbar-nav .nav-link{
-	color: rgba(0,0,0,0.8);
+.py-6{
+	padding-top: 4rem!important;
+	padding-bottom: 4rem!important;
 }
-/*.fit_fill {
-  -o-object-fit: fill;
-     object-fit: fill;
-}*/
+.mt-6{
+	margin-top: 4rem!important;
+}
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url(../image/loan_660_112217032922.jpg);
+  /* Set a specific height */
+  min-height: 93vh;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome_box{
+	min-height: 300px;
+	border: 2px solid #40AFB2;
+	border-radius: 15px;	
+}
+
+.login_box{
+	min-height: 300px;
+	border: 2px solid #40AFB2;
+	border-radius: 15px;	
+}

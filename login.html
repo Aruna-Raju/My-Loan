@@ -24,17 +24,27 @@
         </div>
       </header>
 
-      <main class="container-fluid p-0 text-center">
+      <main class="container-fluid p-0">
         <div class="row parallax m-0">
           <div class="w-75 mx-auto my-auto d-table">
-            <div class="welcome_box bg-white d-table-cell align-middle py-6 px-sm-3">
-              <h3>Welcome to MyLoan</h3>
-              <button class="btn btn-info">Login Using National ID</button>
+            <div class="login_box bg-white d-table-cell align-middle py-5 px-sm-3">
+              <form class="mx-auto px-3">
+                <div class="form-group mb-1">
+                  <label for="national_id">National ID :</label>
+                  <input type="number" name="national_id" class="form-control">
+                </div>
+                <div class="form-group mb-1">
+                  <label for="dob">Date Of Birth :</label>
+                  <input type="number" name="dob" class="form-control">
+                </div>
+                <div class="form-group text-center mt-5">
+                  <button type="submit" class="btn btn-info">LOGIN</button>
+                </div>
+              </form>
+              
             </div>
           </div>
-          
         </div>
-        
       </main>
 
 
