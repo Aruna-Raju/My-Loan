@@ -1,0 +1,13 @@
+body{
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 18px;
+	background-color: #fff;
+	color: #000!important;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: rgba(0,0,0,0.8);
+}
+/*.fit_fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}*/
