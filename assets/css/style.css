@@ -16,7 +16,7 @@ body{
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url(../image/loan_660_112217032922.jpg);
   /* Set a specific height */
-  min-height: 93vh;
+  min-height: 100vh;
   width: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -24,15 +24,93 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.box-center{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .welcome_box{
 	min-height: 300px;
-	border: 2px solid #40AFB2;
-	border-radius: 15px;	
+	border-radius: 15px;
+	background-color: #fff;	
 }
-
 .login_box{
 	min-height: 300px;
-	border: 2px solid #40AFB2;
-	border-radius: 15px;	
+	border-radius: 15px;
+	background-color: rgba(255,255,255);	
 }
+.login_box form input{
+	border: 1px solid #8CC63E;
+}
+.login_box label{
+	font-weight: bolder;
+	/*color: #000;*/
+}
+.wid_80{
+	width: 80vw;
+	border-radius: 15px; 
+}
+.width{
+	width: 100vw;
+}
+footer{
+	height: 10px;
+	background-image: linear-gradient(to right, #8CC63E, #2775BC);
+}
+@media screen and (min-width: 768px){
+	.wid_80{
+		width: 50vw;
+	}
+	.width{
+		width: 50vw;
+	}
+}
+
+
+
+/* ------- Range Slider ------- */
+
+.rangeslider,
+input[type='range'] {
+  max-width: 100vw;
+}
+
+.rangeslider__ruler {
+  cursor: pointer;
+  font-size: .56em;
+  margin: 20px 3px 0 3px;
+  position: relative;
+  top: 100%;
+  text-align: justify;
+}
+
+.rangeslider__ruler:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.rangeslider__handle{
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…Igd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g) #f9ba47!important;
+    border: 4px solid #fff!important;
+	width: 20px!important;
+	height: 20px!important;
+}
+.rangeslider--horizontal .rangeslider__handle{
+	top: -3px!important;
+}
+.rangeslider--horizontal{
+	height: 15px!important;
+}
+.rangeslider__fill{
+	background: #F9BA48!important;
+}
+
+
+
+
+/*
+#8CC63E
+#2775BC
+
+*/
