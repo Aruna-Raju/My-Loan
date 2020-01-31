@@ -20,7 +20,7 @@
   <body>
       <header>
         <nav class="navbar navbar-expand-sm bg-light justify-content-center py-0 shadow fixed-top">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#" onclick="openNav()">
             <i class="fas fa-angle-left" style="font-size: 24px;"></i>
           </a>
           <ul class="navbar-nav mx-auto">
@@ -35,6 +35,14 @@
             <!-- <small><i class="fas fa-power-off"></i> Logout</small> -->
           </a>
         </nav>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
       </header>
 
       <main class="container-fluid pt-2 p-0">
@@ -65,6 +73,15 @@
 
       <footer class="fixed-bottom"></footer>
 
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
 
   </body>
 </html> 
