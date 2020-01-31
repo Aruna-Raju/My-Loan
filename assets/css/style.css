@@ -41,7 +41,16 @@ body{
 	background-color: rgba(255,255,255);	
 }
 .login_box form input{
-	border: 1px solid #8CC63E;
+	font-weight: 600;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #8CC63E;
+	padding: 0px .75rem;
+}
+.login_box form input:focus{
+	box-shadow: none;
 }
 .login_box label{
 	font-weight: bolder;
@@ -54,6 +63,25 @@ body{
 .width{
 	width: 100vw;
 }
+.fill_application label{
+	font-weight: bolder;
+}
+.fill_application input{
+	font-weight: 600;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0px;
+	border-bottom: 1px solid #8CC63E;
+	padding: 0px .75rem;
+}
+.fill_application input:focus{
+	box-shadow: none;
+}
+.fill_application ::placeholder{
+	color: rgba(132,132,132,0.7);
+}
+
 footer{
 	height: 10px;
 	background-image: linear-gradient(to right, #8CC63E, #2775BC);
