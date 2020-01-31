@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyLoan</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="194x194">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/80895110d5.js"></script>
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css'>
+    
+
+  </head>
+  <body>
+      <main class="container-fluid mt-5">
+
+        <div class="row pt-5 wid_80">
+          
+          <input type="range" min="100" max="1000" step="100">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <input type="range" min="0" max="45" step="5">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <input type="range" min="0" max="48" step="6">
+
+        </div>
+        
+
+
+      </main>
+
+      <footer class="fixed-bottom"></footer>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js'></script>
+
+      <script>
+        var valueBubble = '<output class="rangeslider__value-bubble" />';
+
+        function updateValueBubble(pos, value, context) {
+          pos = pos || context.position;
+          value = value || context.value;
+          var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+          var tempPosition = pos + context.grabPos;
+          var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+          if ($valueBubble.length) {
+            $valueBubble[0].style.left = Math.ceil(position) + 'px';
+            $valueBubble[0].innerHTML = value;
+          }
+        }
+
+        $('input[type="range"]').rangeslider({
+          polyfill: false,
+          onInit: function() {
+            this.$range.append($(valueBubble));
+            updateValueBubble(null, null, this);
+          },
+          onSlide: function(pos, value) {
+            updateValueBubble(pos, value, this);
+          }
+        });
+      </script>
+      
+     
+  </body>
+</html> 
